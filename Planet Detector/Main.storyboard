@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="PlanetDetect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="ARView" customClass="ARView" customModule="RealityKit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlN-6f-jL1">
+                                <rect key="frame" x="0.0" y="772" width="414" height="124"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bgp-6f-cak">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-pB-s5v">
+                                            <rect key="frame" x="20" y="8" width="365" height="81.5"/>
+                                            <string key="text">Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other sources of evidence, Earth formed over 4.5 billion years ago.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dMK-pB-s5v" firstAttribute="leading" secondItem="Bgp-6f-cak" secondAttribute="leading" constant="20" symbolic="YES" id="3Ta-JM-y19"/>
+                                        <constraint firstItem="dMK-pB-s5v" firstAttribute="top" secondItem="Bgp-6f-cak" secondAttribute="top" constant="8" id="PQv-oD-zUr"/>
+                                        <constraint firstAttribute="trailing" secondItem="dMK-pB-s5v" secondAttribute="trailing" constant="29" id="YmY-RI-ewq"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="fmA-kb-gG5"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvX-Yj-TUY">
+                                <rect key="frame" x="368" y="64" width="30" height="30"/>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <action selector="getSunInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="02a-J4-d3a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SlN-6f-jL1" secondAttribute="trailing" id="KLf-LE-LH1"/>
+                            <constraint firstItem="gvX-Yj-TUY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Wur-El-Nhf"/>
+                            <constraint firstAttribute="trailing" secondItem="gvX-Yj-TUY" secondAttribute="trailing" constant="16" id="XXt-Xc-RVN"/>
+                            <constraint firstItem="gvX-Yj-TUY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="YKT-sR-cny"/>
+                            <constraint firstItem="SlN-6f-jL1" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="p3j-IB-1ly"/>
+                            <constraint firstItem="SlN-6f-jL1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfO-XF-cS2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
+                        <outlet property="infoLabel" destination="dMK-pB-s5v" id="r3r-Cn-vPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.27678571428569" y="133.33333333333334"/>
+        </scene>
+    </scenes>
+</document>

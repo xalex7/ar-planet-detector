@@ -1,3 +1,62 @@
 [
-
+  {
+    "libraryIdentifier" : "b398b5323e18f64f0be39978a1357936",
+    "format" : "image",
+    "displayName" : "sunImage.jpeg"
+  },
+  {
+    "libraryIdentifier" : "d5f02d946b0b53639bfafc8cace8cb99",
+    "format" : "model",
+    "displayName" : "sun.usdz"
+  },
+  {
+    "libraryIdentifier" : "7056c6d243579d51c43a8be552968b95",
+    "format" : "image",
+    "displayName" : "venus.jpeg"
+  },
+  {
+    "libraryIdentifier" : "2604c80fef068b88768c1dab04b22cd0",
+    "format" : "model",
+    "displayName" : "venus.usdz"
+  },
+  {
+    "libraryIdentifier" : "669d00c9650c7490aaf8155d0a430400",
+    "format" : "model",
+    "displayName" : "earth.usdz"
+  },
+  {
+    "libraryIdentifier" : "c462e477dc3fdbc45bd311e29d231455",
+    "format" : "image",
+    "displayName" : "mercury.jpeg"
+  },
+  {
+    "libraryIdentifier" : "c9b2f66c4b8030498635dd87c96050a6",
+    "format" : "model",
+    "displayName" : "mercury.usdz"
+  },
+  {
+    "libraryIdentifier" : "58238103b661d05b01ed00a8fd0f8cc6",
+    "format" : "image",
+    "displayName" : "earth.jpeg"
+  },
+  {
+    "libraryIdentifier" : "9919b61df82c0d11d920e7410fea6135",
+    "format" : "image",
+    "displayName" : "venus.jpeg"
+  },
+  {
+    "libraryIdentifier" : "36d86a534790c6f5990547c7790a0d79",
+    "format" : "image",
+    "displayName" : "sun.png"
+  },
+  {
+    "libraryIdentifier" : "f3f8093982b4bb8fccb66c890dac434d",
+    "format" : "image",
+    "displayName" : "sun.jpeg"
+  },
+  {
+    "libraryIdentifier" : "ab2b2162c120eb2f2bdb5f25a07cc059",
+    "format" : "image",
+    "displayName" : "earth.png"
+  }
 ]

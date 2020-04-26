@@ -12,14 +12,43 @@ import RealityKit
 class ViewController: UIViewController {
     
     @IBOutlet var arView: ARView!
+    @IBOutlet weak var infoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        infoLabel.text = "Tap the sun for more information"
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        loadPlanets()
+    }
+  
+    func loadPlanets() {
+        Experience.loadSunAsync { [weak self] result in
+            switch result {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .success(let sun):
+                    self?.arView.scene.anchors.append(sun)
+            }
+        }
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        Experience.loadEarthAsync { [weak self] result in
+            switch result {
+                case .failure(let error):
+                    print(error.localizedDescription)
+            case .success(let earth):
+                self?.arView.scene.anchors.append(earth)
+            }
+        }
+    }
+    
+    @IBAction func getSunInfo(_ sender: Any) {
+          
+    }
+    
+    func displayInfo (){
+        DispatchQueue.main.async {
+            self.infoLabel.text = "The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process."
+        }
     }
 }
+
