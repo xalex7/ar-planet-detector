@@ -653,7 +653,99 @@
                       "isModal" : false,
                       "name" : "ShowInfo",
                       "triggers" : [
-
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "userIdentifier" : "showInfo"
+                                },
+                                "name" : "custom"
+                              },
+                              "identifier" : "5723EBAE-F9CE-4D50-84CC-B21E4C143C56",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "E75D6189-2096-4AF3-8C58-75F8C891CFAF"
+                                          ],
+                                          "userIdentifier" : "SUNTAP"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "BC546D6C-EE9B-4874-9061-873E1E267451",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "FCEBD65B-403B-4A3E-816A-7F17CE384909",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.21568627655506134,
+                        0.72549021244049072,
+                        0.80000001192092896,
+                        1
+                      ],
+                      "identifier" : "25B1302A-1EC6-4084-897F-C9F52BF267AD",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "SUNTAP",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "target" : [
+                                    "E75D6189-2096-4AF3-8C58-75F8C891CFAF"
+                                  ]
+                                },
+                                "name" : "tapTarget"
+                              },
+                              "identifier" : "53AAE801-3884-4279-A2B6-6E57B309BAFD",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
                       ]
                     }
                   ],

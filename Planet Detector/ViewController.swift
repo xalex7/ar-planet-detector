@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var arView: ARView!
     @IBOutlet weak var infoLabel: UILabel!
     
+    var sun: Experience.Sun!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         infoLabel.text = "Tap the sun for more information"
@@ -28,6 +30,11 @@ class ViewController: UIViewController {
                     print(error.localizedDescription)
                 case .success(let sun):
                     self?.arView.scene.anchors.append(sun)
+                    self?.sun = sun
+                
+                let sunInfoAction =
+                    sun.actions.allActions.filter({$0.identifier == "SUNTAP"}).first
+                    sunInfoAction?.onAction = { entity in self?.displayInfo()}
             }
         }
         
@@ -42,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getSunInfo(_ sender: Any) {
-          
+        sun.notifications.showInfo.post()
     }
     
     func displayInfo (){
